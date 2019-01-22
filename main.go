@@ -4,10 +4,12 @@ package main
 import (
 
 	"fmt"
+	"github.com/siddhiparekh11/GoDataStructures/strings"
+	"github.com/siddhiparekh11/GoDataStructures/trees"
 )
 
 
-type Node struct {
+/*type Node struct {
 
 	data int
 	next *Node
@@ -50,12 +52,30 @@ func Print(){
 		}
 		temp= temp.next
 	}
-}
+}*/
 
 func main() {
 
-	carr := []rune("siddhi")
-	fmt.Println(string(carr[3]))
+	fmt.Println(strings.Permute("abc"))
+	//fmt.Println(string(carr[3]))
+
+	arr := []int{18,36,9,12,6,10,8,1}
+
+	var root *trees.Node
+
+	for i:= 0;i<len(arr);i++{
+		root = trees.Insert(arr[i],root)
+	}
+
+	trees.Inorder(root)
+
+
+
+	/*arr := [...]int{121,2,3}
+
+	parr := &arr
+
+	fmt.Println((*parr)[0])
 
 	Append(1)
 	Append(2)
@@ -64,4 +84,5 @@ func main() {
 	Append(5)
 
 	Print()
+	fmt.Println(strings.Reverse("siddhi"))*/
 }
