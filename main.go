@@ -69,6 +69,11 @@ func main() {
 
 	trees.Inorder(root)
 
+	persons := []strings.Person {{"siddhi",32},{"ishani",28},{"bhavna",60}}
+
+	p:= strings.Compare(persons)
+	fmt.Println(p)
+
 
 
 	/*arr := [...]int{121,2,3}
